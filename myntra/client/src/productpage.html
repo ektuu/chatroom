@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLAM GEEKS Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Whitney', Helvetica, Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/564x/cb/75/92/cb7592e628182e0e8e3b095e4aac39be.jpg');
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #282c3f;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #ff3f6c;
+            font-family: 'Abril Fatface', cursive;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(255, 63, 108, 0.3);
+        }
+        
+        .category {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 1200px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #ff3f6c;
+            margin-bottom: 20px;
+        }
+        
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .product {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+            flex: 1 1 200px;
+            box-sizing: border-box;
+            transition: transform 0.2s;
+        }
+        
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        .product p {
+            margin: 10px 0;
+            color: #282c3f;
+        }
+        
+        .product button {
+            width: 100%;
+            background-color: #ff3f6c;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .product button:hover {
+            background-color: #ff527b;
+        }
+        
+        .share-icon {
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 20px;
+            color: #ff3f6c;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            border-radius: 4px;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .share-option {
+            width: 100%;
+            background-color: #ff3f6c;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .share-option:hover {
+            background-color: #ff527b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GLAM GEEKS Shop</h1>
+    <div class="category">
+        <h2>T-Shirts</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/483960103/photo/blank-black-t-shirt-front-with-clipping-path.webp?b=1&s=170667a&w=0&k=20&c=BcPtyKJxhRevZV29PDZ1y-le2WbmH6Xf4O_lkmopDxg=" alt="T-Shirt 1">
+                <p>black Tshirt</p>
+                <button onclick="openProductPage('https://media.istockphoto.com/id/483960103/photo/blank-black-t-shirt-front-with-clipping-path.webp?b=1&s=170667a&w=0&k=20&c=BcPtyKJxhRevZV29PDZ1y-le2WbmH6Xf4O_lkmopDxg=')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+            <div class="product">
+                <img src="https://png.pngtree.com/element_our/png/20180828/yellow-t-shirt-mockup-png_72954.jpg" alt="T-Shirt 2">
+                <p>Yellow tee</p>
+                <button onclick="openProductPage('https://png.pngtree.com/element_our/png/20180828/yellow-t-shirt-mockup-png_72954.jpg')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+            <div class="product">
+                <img src="https://cdn.pixabay.com/photo/2016/08/15/19/57/red-devils-1596355_640.jpg" alt="T-Shirt 3">
+                <p>RedDevils Tee</p>
+                <button onclick="openProductPage('https://cdn.pixabay.com/photo/2016/08/15/19/57/red-devils-1596355_640.jpg')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+            <div class="product">
+                <img src="https://chriscross.in/cdn/shop/files/95_1024x.jpg?v=1695712761" alt="T-Shirt 4">
+                <p>Dark Blue Tshirt</p>
+                <button onclick="openProductPage('https://chriscross.in/cdn/shop/files/95_1024x.jpg?v=1695712761')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+        </div>
+    </div>
+    <div class="category">
+        <h2>Dresses</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnQ7MrLsz64kdal7m1YE19gg94OrwXPhSpRQ&s" alt="Dress 1">
+                <p>Blue Dress</p>
+                <button onclick="openProductPage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnQ7MrLsz64kdal7m1YE19gg94OrwXPhSpRQ&s')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN3rtNmDYwq-LmcbfVmkVRlrk5PmaDFJTseg&s" alt="Dress 2">
+                <p>blue Floral Dress</p>
+                <button onclick="openProductPage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN3rtNmDYwq-LmcbfVmkVRlrk5PmaDFJTseg&s')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6sPHzkJHGDvpTdqa9e0hjT-p0R7M5KQnwTw&s" alt="Dress 3">
+                <p>Red Floral Dress</p>
+                <button onclick="openProductPage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6sPHzkJHGDvpTdqa9e0hjT-p0R7M5KQnwTw&s')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71td+0ThS4L.AC_UY1100.jpg" alt="Dress 4">
+                <p>Green dress</p>
+                <button onclick="openProductPage('https://m.media-amazon.com/images/I/71td+0ThS4L.AC_UY1100.jpg')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+        </div>
+    </div>
+    <div class="category">
+        <h2>Formal Shirts</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://tiimg.tistatic.com/fp/1/004/861/white-color-ladies-formal-shirts-802.jpg" alt="T-Shirt 1">
+                <p>White Shirt</p>
+                <button onclick="openProductPage('https://tiimg.tistatic.com/fp/1/004/861/white-color-ladies-formal-shirts-802.jpg')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSzgRTlMcmBohWU6VLx9w2DqlGnpmT2M2oYA&s" alt="T-Shirt 2">
+                <p>Black Shirt</p>
+                <button onclick="openProductPage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSzgRTlMcmBohWU6VLx9w2DqlGnpmT2M2oYA&s')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+            <div class="product">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/7/RI/RI/RK/87068913/ladies-formal-shirts-500x500.jpg" alt="T-Shirt 3">
+                <p>Grey Shirt</p>
+                <button onclick="openProductPage('https://5.imimg.com/data5/SELLER/Default/2022/7/RI/RI/RK/87068913/ladies-formal-shirts-500x500.jpg')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+            <div class="product">
+                <img src="https://www.westside.com/cdn/shop/files/300957755IVORY_3.jpg?v=1700645772" alt="T-Shirt 4">
+                <p>Polka Dot Shirt</p>
+                <button onclick="openProductPage('https://www.westside.com/cdn/shop/files/300957755IVORY_3.jpg?v=1700645772')">Try Now</button>
+                <i class="fas fa-share-alt share-icon" onclick="showShareModal()"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------------------------------------------------------------->
+
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeShareModal()">&times;</span>
+            <button class="share-option" onclick="redirectToChatroom()">Share to Chatroom</button>
+            <!-- <button class="share-option" onclick="shareToSocialMedia('twitter')">Share to Twitter</button> -->
+        </div>
+    </div>
+
+    <script>
+        function showShareModal() {
+            document.getElementById('shareModal').style.display = 'block';
+        }
+
+        function closeShareModal() {
+            document.getElementById('shareModal').style.display = 'none';
+        }
+
+        // function shareToSocialMedia(platform) {
+        //     let url = window.location.href;
+        //     if (platform === 'facebook') {
+        //         window.open(https://www.facebook.com/sharer/sharer.php?u=${url}, '_blank');
+        //     } else if (platform === 'twitter') {
+        //         window.open(https://twitter.com/intent/tweet?url=${url}, '_blank');
+        //     }
+        // }
+        function redirectToChatroom() {
+            let url = window.location.href;
+            const chatroomUrl = 'http://localhost:3000/home/chats-module/conversations-with-messages';
+            window.location.href = chatroomUrl;
+            window.open('http://localhost:3000/home/chats-module/conversations-with-messages');
+
+        }
+
+        function openProductPage(url) {
+            const encodedUrl = encodeURIComponent(url);
+            window.location.href = http: //localhost:3001/?garmentImageUrl=${encodedUrl};
+        }
+    </script>
+</body>
+
+</html>

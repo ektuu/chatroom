@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9e1e7;
+    /* Light pink background */
+    background-image: url('https://i.pinimg.com/564x/cb/75/92/cb7592e628182e0e8e3b095e4aac39be.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Set background properties */
+}
+
+.App {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* White background with opacity for main content */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #ff69b4;
+    /* Barbie pink */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ff69b4;
+    /* Barbie pink */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    /* Barbie pink */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e64a8e;
+    /* Lighter shade of pink on hover */
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    /* Arrange images with space between them */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allow images to wrap to next line if needed */
+    margin-top: 20px;
+}
+
+.image-box {
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+}
+
+.image-box h2 {
+    color: #ff69b4;
+    /* Barbie pink */
+    margin-bottom: 10px;
+}
+
+.image-box img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}

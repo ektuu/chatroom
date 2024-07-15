@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbie Themed Page</title>
+    <style>
+        @keyframes glitter {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+        
+        body {
+            background-color: #FFB6C1;
+            /* Light Pink */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        .title {
+            font-size: 4em;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff0000, #ff0099, #ff00ff, #9900ff, #0000ff);
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200% 200%;
+            animation: glitter 3s linear infinite;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            margin-bottom: 50px;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .button {
+            background-color: #FF69B4;
+            /* Hot Pink */
+            border: none;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            margin: 15px 30px;
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+        
+        .button:hover {
+            background-color: #FF1493;
+            /* Deeper Pink */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">GLAM GEEKS</div>
+    <div class="container">
+        <button class="button" onclick="window.location.href='productpage.html'">Shoppiez Go Shop</button>
+        <button class="button" onclick="window.location.href='chatroom.html'">Go to Chatroom</button>
+    </div>
+</body>
+
+</html>
